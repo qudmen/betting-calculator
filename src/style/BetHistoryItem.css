@@ -1,0 +1,22 @@
+.bet-history-item {
+    min-width: 0;
+    padding: 0.8rem;
+    overflow-wrap: anywhere;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 18%);
+}
+
+.bet-details {
+    margin: 0;
+    padding: 0.12rem 0;
+    color: #c0cbda;
+    font-size: 0.85rem;
+}
+
+.bet-details.pt-3 {
+    padding-top: 0.12rem;
+    color: #8290a4;
+    font-size: 0.72rem;
+}
