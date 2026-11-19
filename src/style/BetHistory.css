@@ -1,0 +1,38 @@
+.bet-history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bet-history-items {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.delete {
+    flex: 0 0 auto;
+    padding: 0.4rem 0.65rem;
+    color: #fda4af;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #321d27;
+    border: 1px solid #713a49;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: #48232f;
+}
+
+.title {
+    margin: 0;
+    color: #e2e8f0;
+    font-size: 1.15rem;
+}
+
+.invis{
+    display: none;
+}
