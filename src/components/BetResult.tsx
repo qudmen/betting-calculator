@@ -1,4 +1,4 @@
-import './style/BetResult.css'
+import '../style/BetResult.css'
 
 type BetResultProps = {
   sum: number;

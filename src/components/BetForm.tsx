@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import './style/BetForm.css'
+import '../style/BetForm.css'
 import BetResult from './BetResult'
-import type { BetRecord } from './types'
+import type { BetRecord } from '../types'
 
 type BetFormProps = {
   onAddRecord: (record: BetRecord) => void
@@ -45,10 +45,7 @@ function BetForm({ onAddRecord }: BetFormProps) {
     setIsOpenOdd(oddInvalid)
     setIsOpenType(typeInvalid)
 
-    console.log(sumInvalid);
-
     if (sumInvalid || oddInvalid || typeInvalid) {
-      console.log("not worked");
       setSubmitted(null)
       return
     }
@@ -72,9 +69,6 @@ function BetForm({ onAddRecord }: BetFormProps) {
       profit: profit,
     }
     onAddRecord(record)
-
-    console.log("worked");
-
   }
 
   return (

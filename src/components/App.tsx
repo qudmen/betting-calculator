@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import './style/App.css'
+import '../style/App.css'
 import BetForm from './BetForm'
 import BetHistory from './BetHistory'
-import type { BetRecord } from './types'
+import type { BetRecord } from '../types'
 
 function App() {
   const [records, setRecords] = useState<BetRecord[]>(() => {
@@ -17,20 +17,22 @@ function App() {
     localStorage.setItem('records', JSON.stringify(records))
   }, [records])
 
+  function handleAddRecord(record: BetRecord) {
+    setRecords((previousRecords) => [record, ...previousRecords].slice(0, 5))
+  }
+
+  function handleClearRecords() {
+    setRecords([])
+  }
+
   return (
     <>
       <div className="app-main">
         <aside className="history">
-          <BetHistory records={records} onClear={() => setRecords([])} />
+          <BetHistory records={records} onClear={handleClearRecords} />
         </aside>
         <main className="calculator">
-          <BetForm
-            onAddRecord={(record) =>
-              setRecords((previousRecords) =>
-                [record, ...previousRecords].slice(0, 5)
-              )
-            }
-          />
+          <BetForm onAddRecord={handleAddRecord} />
         </main>
       </div>
     </>

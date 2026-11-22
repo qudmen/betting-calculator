@@ -1,6 +1,6 @@
 import BetHistoryItem from './BetHistoryItem'
-import './style/BetHistory.css'
-import type { BetRecord } from './types'
+import '../style/BetHistory.css'
+import type { BetRecord } from '../types'
 
 type BetHistoryProps = {
   records: BetRecord[]
