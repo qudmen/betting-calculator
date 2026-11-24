@@ -1,0 +1,151 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bet-form-container {
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: #111827;
+}
+
+.bet-form {
+    width: 100%;
+    max-width: 36rem;
+    padding: 1.75rem;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    box-shadow: 0 12px 32px rgb(0 0 0 / 24%);
+}
+
+.bet-title {
+    margin: 0 0 1.5rem;
+    color: #f1f5f9;
+    font-size: 1.65rem;
+    font-weight: bold;
+}
+
+.bet-inputs {
+    min-width: 0;
+}
+
+.input-pos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-bottom: 1rem;
+}
+
+.input-pos label {
+    color: #b6c2d2;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.input-pos input,
+.input-pos select {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.75rem;
+    color: #e2e8f0;
+    background-color: #111827;
+    border: 1px solid #475569;
+    border-radius: 7px;
+}
+
+.input-pos input:focus,
+.input-pos select:focus {
+    border-color: #60a5fa;
+    outline: 3px solid rgb(96 165 250 / 22%);
+}
+
+.submit-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.inputs-results {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(8rem, 0.8fr);
+    gap: 1.25rem;
+}
+
+.bet-results {
+    min-width: 0;
+    padding-top: 0.15rem;
+}
+
+.bet-results-container {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.won,
+.profit {
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.8rem;
+    color: #d3deeb;
+    background-color: #293548;
+    border-radius: 8px;
+}
+
+.won p,
+.profit p {
+    margin: 0;
+}
+
+.won p:last-child,
+.profit p:last-child {
+    color: #93c5fd;
+    font-weight: 700;
+}
+
+.submit-button {
+    min-height: 2.75rem;
+    padding: 0.65rem 1.1rem;
+    color: #fff;
+    font-weight: 700;
+    background-color: #3478c8;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.submit-button:hover {
+    background-color: #2865aa;
+}
+
+.submit-button:active {
+    transform: translateY(1px);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid rgb(96 165 250 / 34%);
+    outline-offset: 2px;
+}
+
+.error-message {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .bet-form-container {
+        min-height: auto;
+        padding: 1rem;
+    }
+
+    .bet-form {
+        padding: 1.25rem;
+    }
+
+    .inputs-results {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+}
